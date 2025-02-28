@@ -1,0 +1,97 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+    .components-button.is-destructive {
+        margin-top: 10px;
+    }
+}
+
+.wp-block-block-collection-sagar-faq {
+    max-width: 800px;
+    margin: 2rem auto;
+    
+    .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .faq-question {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        padding: var(--faq-question-padding);
+        margin: var(--faq-question-margin);
+        color: var(--faq-question-color);
+        
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            flex: 1;
+        }
+        
+        .toggle-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #666;
+            margin-left: 1rem;
+            min-width: 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        &[data-aria-expanded="true"] {
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
+            
+            .toggle-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .faq-answer {
+        background: #fff;
+        color: var(--faq-answer-color);
+        line-height: 1.6;
+        padding: var(--faq-answer-padding);
+        margin: var(--faq-answer-margin);
+        &[hidden] {
+            display: none;
+        }
+    }
+}
+
+// Add some responsive adjustments
+@media (max-width: 768px) {
+    .wp-block-block-collection-sagar-faq {
+        margin: 1rem;
+        
+        .faq-question {
+            padding: 1rem;
+            
+            .question-text {
+                font-size: 1rem;
+            }
+        }
+        
+        .faq-answer {
+            padding: 1rem;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-block-collection-sagar-faq {
+    .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        
+        .faq-question-header {
+            padding: 0.75rem;
+            background: #f7f7f7;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &:hover {
+                background: #f0f0f0;
+            }
+            
+            .faq-question-text {
+                flex: 1;
+                font-weight: 500;
+            }
+            
+            .toggle-icon {
+                margin-left: 1rem;
+                font-size: 1.2rem;
+                color: #666;
+            }
+        }
+        
+        .faq-content {
+            padding: 1rem;
+            background: #fff;
+            
+            .components-base-control {
+                margin-bottom: 1rem;
+            }
+            
+            .components-button.is-destructive {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    
+    .components-button.is-primary {
+        margin-top: 1rem;
+    }
+
+    .faq-style-controls {
+        width: 100%;
+        
+        .color-control {
+            margin-bottom: 1.5rem;
+            
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+            }
+        }
+        
+        .components-color-picker {
+            margin-bottom: 1rem;
+        }
+        
+        .components-select-control {
+            margin-bottom: 1rem;
+        }
+    }
+
+    // Update FAQ item styles to use CSS variables
+    .faq-item {
+        border-color: var(--faq-border-color);
+        
+        .faq-question-header {
+            color: var(--faq-question-color);
+        }
+        
+        .faq-answer {
+            color: var(--faq-answer-color);
+        }
+    }
+}
